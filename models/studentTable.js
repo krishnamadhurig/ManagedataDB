@@ -1,18 +1,18 @@
-const{Sequelize,Datatypes}=require('sequelize')
+const{Sequelize,DataTypes}=require('sequelize')
 const sequelize=require('../utils/db-connection')
 const Students=sequelize.define('Students',{
     id:{
-        type:Datatypes.INTEGER,
-        PRIMARYKEY:true,
+        type:DataTypes.INTEGER,
+        primaryKey:true,
         autoIncrement:true,
         allowNull:false
     },
     name:{
-        type:Datatypes.STRING,
+        type:DataTypes.STRING,
         allowNull:false
     },
     email:{
-        type:Datatypes.STRING,
+        type:DataTypes.STRING,
         allowNull:false
     }
 })

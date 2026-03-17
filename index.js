@@ -10,7 +10,7 @@ app.get("/",(req,res)=>{
 
 })
 app.use('/students',studentRoutes)
-db.sync({force:false}).then(()=>{
+db.sync({force:true}).then(()=>{
     app.listen(5000,()=>{
     console.log("server is running on port 5000")
     })
